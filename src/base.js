@@ -11,6 +11,7 @@ export { createAnimatedDebug as debug } from './core/AnimatedDebug';
 export { createAnimatedCall as call } from './core/AnimatedCall';
 export { createAnimatedEvent as event } from './core/AnimatedEvent';
 export { createAnimatedAlways as always } from './core/AnimatedAlways';
+export { createAnimatedAudio as audio } from './core/AnimatedAudio';
 export { createAnimatedConcat as concat } from './core/AnimatedConcat';
 export { createAnimatedBlock as block, adapt } from './core/AnimatedBlock';
 export {
