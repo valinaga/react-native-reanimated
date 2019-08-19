@@ -21,6 +21,7 @@ import com.facebook.react.uimanager.events.Event;
 import com.facebook.react.uimanager.events.EventDispatcherListener;
 import com.swmansion.reanimated.nodes.AlwaysNode;
 import com.swmansion.reanimated.nodes.AudioNode;
+import com.swmansion.reanimated.nodes.AudioOpNode;
 import com.swmansion.reanimated.nodes.BezierNode;
 import com.swmansion.reanimated.nodes.BlockNode;
 import com.swmansion.reanimated.nodes.ClockNode;
