@@ -24,11 +24,18 @@ public class AudioNode extends Node implements NodesManager.OnAnimationFrame {
   }
 
   @Override
-  protected Double evaluate() {
+  protected Double[] evaluate() {
+    Double[] values = new Double[3];
+    values[0] = 0.1;
+    values[1] = 0.3;
+    values[2] = 0.5;
     if (isPlaying) {
-      return Double.valueOf(0.75);
+      values[0] = 0.6;
+      values[1] = 0.7;
+      values[2] = 0.8;
+      return values;
     }
-    return Double.valueOf(0.25);
+    return values;
   }
 
   @Override
