@@ -268,8 +268,8 @@ public class NodesManager implements EventDispatcherListener {
       node = new AlwaysNode(nodeID, config, this);
     } else if ("audio".equals(type)) {
       node = new AudioNode(nodeID, config, this);
-    } else if ("audioPlay".equals(type)) {
-      node = new AudioOpNode.AudioPlayNode(nodeID, config, this);
+    } else if ("audioStart".equals(type)) {
+      node = new AudioOpNode.AudioStartNode(nodeID, config, this);
     } else if ("audioStop".equals(type)) {
       node = new AudioOpNode.AudioStopNode(nodeID, config, this);
     } else if ("audioTest".equals(type)) {

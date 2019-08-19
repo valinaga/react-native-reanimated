@@ -5,8 +5,8 @@ import com.swmansion.reanimated.NodesManager;
 
 public abstract class AudioOpNode extends Node {
 
-  public static class AudioPlayNode extends AudioOpNode {
-    public AudioPlayNode(int nodeID, ReadableMap config, NodesManager nodesManager) {
+  public static class AudioStartNode extends AudioOpNode {
+    public AudioStartNode(int nodeID, ReadableMap config, NodesManager nodesManager) {
       super(nodeID, config, nodesManager);
     }
 

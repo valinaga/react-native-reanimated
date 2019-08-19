@@ -1,6 +1,7 @@
 import { Image, ScrollView, Text, View } from 'react-native';
 import Easing from './Easing';
 import AnimatedClock from './core/AnimatedClock';
+import AnimatedAudio from './core/AnimatedAudio';
 import AnimatedValue from './core/AnimatedValue';
 import AnimatedNode from './core/AnimatedNode';
 import AnimatedCode from './core/AnimatedCode';
@@ -36,6 +37,7 @@ const Animated = {
 
   // classes
   Clock: AnimatedClock,
+  Audio: AnimatedAudio,
   Value: AnimatedValue,
   Node: AnimatedNode,
 
