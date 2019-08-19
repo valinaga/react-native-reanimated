@@ -6,9 +6,13 @@ import com.swmansion.reanimated.NodesManager;
 
 public class AudioNode extends Node implements NodesManager.OnAnimationFrame {
   public boolean isPlaying = false;
+  private int index = 2;
+  private static double[] stopValues = [0.1, 0.2, 0.3];
+  private static double[] playValues = [0.5, 0.6, 0.7];
 
   public AudioNode(int nodeID, ReadableMap config, NodesManager nodesManager) {
     super(nodeID, config, nodesManager);
+    index = config.getInt("index");
   }
 
   public void play() {
@@ -24,18 +28,11 @@ public class AudioNode extends Node implements NodesManager.OnAnimationFrame {
   }
 
   @Override
-  protected Double[] evaluate() {
-    Double[] values = new Double[3];
-    values[0] = 0.1;
-    values[1] = 0.3;
-    values[2] = 0.5;
+  protected Double evaluate() {
     if (isPlaying) {
-      values[0] = 0.6;
-      values[1] = 0.7;
-      values[2] = 0.8;
-      return values;
+      return Double.valueOf(playValues[index]);
     }
-    return values;
+    return Double.valueOf(stopValues[index]);
   }
 
   @Override

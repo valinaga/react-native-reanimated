@@ -1,16 +1,17 @@
 import AnimatedNode from './AnimatedNode';
 import { clock } from './AnimatedClock';
+import { val } from '../val';
 
 export default class AnimatedAudio extends AnimatedNode {
   _started;
   _attached;
 
-  constructor() {
-    super({ type: 'audio'});
+  constructor(index) {
+    super({ type: 'always', index: index });
   }
 
   __onEvaluate() {
-    return val(clock);
+    return val(this);
   }
 
   __attach() {
