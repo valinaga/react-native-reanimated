@@ -21,7 +21,7 @@ class AnimatedDebug extends AnimatedNode {
 }
 
 export function createAnimatedDebug(message, value) {
-  if (__DEV__) {
+  if (__DEV__ || true) {
     const runningInRemoteDebugger = typeof atob !== 'undefined';
     // hack to detect if app is running in remote debugger
     // https://stackoverflow.com/questions/39022216
