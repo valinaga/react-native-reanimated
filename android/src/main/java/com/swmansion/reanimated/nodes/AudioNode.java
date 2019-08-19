@@ -5,7 +5,7 @@ import com.facebook.react.bridge.ReadableMap;
 import com.swmansion.reanimated.NodesManager;
 
 public class AudioNode extends Node implements NodesManager.OnAnimationFrame {
-  public boolean isPlaying;
+  public boolean isPlaying = false;
 
   public AudioNode(int nodeID, ReadableMap config, NodesManager nodesManager) {
     super(nodeID, config, nodesManager);

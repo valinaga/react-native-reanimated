@@ -19,6 +19,6 @@ class AnimatedAudioTest extends AnimatedNode {
   }
 }
 
-export function createAnimatedAudioTest(clock) {
-  return new AnimatedAudioTest(clock);
+export function createAnimatedAudioTest(audio) {
+  return new AnimatedAudioTest(audio);
 }
