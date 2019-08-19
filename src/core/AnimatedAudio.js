@@ -1,16 +1,28 @@
 import AnimatedNode from './AnimatedNode';
 
-class AnimatedAudio extends AnimatedNode {
-  _what;
+export default class AnimatedAudio extends AnimatedNode {
+  _started;
 
-  constructor(what) {
-    super({ type: 'audio', what: what.__nodeID }, [what]);
-    this._what = what;
+  constructor() {
+    super({ type: 'audio'});
   }
 
   __onEvaluate() {
     return 0;
   }
+
+  start() {
+    this._started = true;
+  }
+
+  stop() {
+    this._started = false;
+  }
+
+  isStarted() {
+    return this._started;
+  }
+
 }
 
 export function createAnimatedAudio(item) {

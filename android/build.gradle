@@ -31,8 +31,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.facebook.react:react-native:+'
-    implementation "com.android.support:transition:${rootProject.ext.supportLibVersion}"
+    compile 'com.facebook.react:react-native:+'
+    compile "com.android.support:transition:27.0.0"
 }
 
 def configureReactNativePom(def pom) {
@@ -83,12 +83,12 @@ afterEvaluate { project ->
         include '**/*.java'
     }
 
-    android.libraryVariants.all { variant ->
-        def name = variant.name.capitalize()
-        task "jar${name}"(type: Jar, dependsOn: variant.javaCompileProvider.get()) {
-            from variant.javaCompileProvider.get().destinationDir
-        }
-    }
+    // android.libraryVariants.all { variant ->
+    //     def name = variant.name.capitalize()
+    //     task "jar${name}"(type: Jar, dependsOn: variant.javaCompileProvider.get()) {
+    //         from variant.javaCompileProvider.get().destinationDir
+    //     }
+    // }
 
     artifacts {
         archives androidSourcesJar

@@ -46,3 +46,5 @@ bin/
 \.buckd/
 android/app/libs
 android/keystores/debug.keystore
+android/.settings/org.eclipse.buildship.core.prefs
+Example/android/.settings/org.eclipse.buildship.core.prefs
