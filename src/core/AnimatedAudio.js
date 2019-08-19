@@ -7,7 +7,7 @@ export default class AnimatedAudio extends AnimatedNode {
   _attached;
 
   constructor(index) {
-    super({ type: 'always', index: index });
+    super({ type: 'audio', index: index });
   }
 
   __onEvaluate() {
