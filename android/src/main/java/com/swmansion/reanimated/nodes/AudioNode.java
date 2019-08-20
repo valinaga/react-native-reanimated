@@ -3,6 +3,7 @@ package com.swmansion.reanimated.nodes;
 
 import com.facebook.react.bridge.ReadableMap;
 import com.swmansion.reanimated.NodesManager;
+import java.lang.Math;
 
 public class AudioNode extends Node implements NodesManager.OnAnimationFrame {
   public boolean isPlaying = false;
@@ -30,9 +31,9 @@ public class AudioNode extends Node implements NodesManager.OnAnimationFrame {
   @Override
   protected Double evaluate() {
     if (isPlaying) {
-      return playValues[index];
+      return Math.random(); // playValues[index];
     }
-    return stopValues[index];
+    return Math.random(); // stopValues[index];
   }
 
   @Override
