@@ -4,7 +4,7 @@ package com.swmansion.reanimated.nodes;
 import com.facebook.react.bridge.ReadableMap;
 import com.swmansion.reanimated.NodesManager;
 import java.lang.Math;
-import java.util.Log;
+import android.util.Log;
 
 public class AudioNode extends Node implements NodesManager.OnAnimationFrame {
   private final static String TAG = "REANIMATED NATIVE AUDIONODE";
