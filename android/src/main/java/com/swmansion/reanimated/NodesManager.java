@@ -20,8 +20,7 @@ import com.facebook.react.uimanager.UIManagerReanimatedHelper;
 import com.facebook.react.uimanager.events.Event;
 import com.facebook.react.uimanager.events.EventDispatcherListener;
 import com.swmansion.reanimated.nodes.AlwaysNode;
-import com.swmansion.reanimated.nodes.AudioNode;
-import com.swmansion.reanimated.nodes.AudioOpNode;
+import com.swmansion.reanimated.nodes.AudioFxNode;
 import com.swmansion.reanimated.nodes.BezierNode;
 import com.swmansion.reanimated.nodes.BlockNode;
 import com.swmansion.reanimated.nodes.ClockNode;
@@ -267,14 +266,10 @@ public class NodesManager implements EventDispatcherListener {
       node = new EventNode(nodeID, config, this);
     } else if ("always".equals(type)) {
       node = new AlwaysNode(nodeID, config, this);
-    } else if ("audio".equals(type)) {
-      node = new AudioNode(nodeID, config, this);
-    } else if ("audioStart".equals(type)) {
-      node = new AudioOpNode.AudioStartNode(nodeID, config, this);
-    } else if ("audioStop".equals(type)) {
-      node = new AudioOpNode.AudioStopNode(nodeID, config, this);
-    } else if ("audioTest".equals(type)) {
-      node = new AudioOpNode.AudioTestNode(nodeID, config, this);
+    } else if ("audiofx".equals(type)) {
+      node = new AudioFxNode(nodeID, config, this);
+    } else if ("getkey".equals(type)) {
+      node = new GetKeyNode(nodeID, config, this);
     } else if ("concat".equals(type)) {
       node = new ConcatNode(nodeID, config, this);
     } else if ("param".equals(type)) {

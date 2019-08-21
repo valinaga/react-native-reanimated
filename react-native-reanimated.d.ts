@@ -187,7 +187,6 @@ declare module 'react-native-reanimated' {
     // classes
     export {
       AnimatedClock as Clock,
-      AnimatedAudio as Audio,
       AnimatedNode as Node,
       AnimatedValue as Value,
     };
@@ -247,6 +246,11 @@ declare module 'react-native-reanimated' {
       message: string,
       value: Adaptable<T>,
     ): AnimatedNode<T>;
+
+    export function audiofx<T>(): AnimatedNode<T>;
+    export function get<T>(key: string, value: AnimatedNode<any>): AnimatedNode<T>;
+    export function always<T>(ifNode: AnimatedNode<K>): AnimatedNode<K>;
+
     export function onChange(
       value: Adaptable<number>,
       action: Adaptable<number>,
@@ -260,9 +264,6 @@ declare module 'react-native-reanimated' {
       argMapping: ReadonlyArray<Mapping>,
       config?: {},
     ): (...args: any[]) => void;
-    export function startAudio(audio: AnimatedAudio): AnimatedNode<0>;
-    export function stopAudio(audio: AnimatedAudio): AnimatedNode<0>;
-    export function audioRunning(audio: AnimatedAudio): AnimatedNode<0 | 1>;
 
     // derived operations
     export function abs(value: Adaptable<number>): AnimatedNode<number>;
@@ -291,6 +292,11 @@ declare module 'react-native-reanimated' {
       clock: AnimatedClock,
       state: DecayState,
       config: DecayConfig,
+    ): AnimatedNode<number>;
+    export function playing(
+      clock: AnimatedClock,
+      state: TimingState,
+      value: AnimatedNode<number>,
     ): AnimatedNode<number>;
     export function timing(
       clock: AnimatedClock,
